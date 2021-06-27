@@ -1,4 +1,5 @@
 #include <map>
+#include <iostream>
 #include <string>
 
 class Solution {
@@ -15,4 +16,22 @@ public:
         }
         return true;
     }
+
+    istream& read_word (istream& is, char* buffer, int max)
+    {
+        is.width(max);
+        is >> buffer;
+        return is;
+    }
 };
+
+
+int main(int argc, char* argv[])
+{
+    Solution y;
+    for (int x; std::cin >> x; )
+    {
+        if ( y.isPalindrome (x) == 0 ) std::cout << x <<  " is not Palindrome.\n"; 
+        else std::cout << x << " is a Palindrome.\n";
+    }
+}
