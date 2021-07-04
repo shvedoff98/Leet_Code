@@ -13,7 +13,7 @@ public:
         for (auto& x : nums)
         {
             mp[x]++;
-            if (mp[x] == nums.size()/2)
+            if (mp[x] > 1)
             {
                 res = x;
                 return res;
